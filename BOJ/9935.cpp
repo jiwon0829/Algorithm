@@ -18,10 +18,8 @@ int main()
 	for(int i=0;i<text.length();++i)
 	{
 		result[index++] = text[i];
-		if(result[index - 1] == word[len - 1])
+		if((result[index - 1] == word[len - 1]) && (index - len >= 0))
 		{
-            if(index - len < 0)
-                continue;
 			bool find = true;
 			for(int j=0;j<len;++j)
 			{
@@ -43,4 +41,3 @@ int main()
 			cout<<result[i];
 	}
 }
-
